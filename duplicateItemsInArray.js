@@ -26,13 +26,13 @@ for(let i=0; i<=len; i++){
   
 
 
-//step 02 using object
+//step 02 using object in javascript
 
 let a=[1,2,5,2,1,8];
 var obj={};
  for(let elements of a){
    //for of  loop(for elements(value) of arrayname)
-   obj[elements]=true;
+   obj[elements]=true; //remove duplicate items
    //key of obj= value for keys
  }
  console.log(obj); //return obj not array
@@ -40,3 +40,13 @@ var obj={};
 
 console.log(Object.keys(obj));
 
+//approach 03 using Set in javascript
+
+let b=[1,2,1,1,5,2,7];
+
+let mySet=new Set(a); //intialize set
+console.log(mySet); //printing set
+
+let final=[... new Set(a)]; //spread operator
+//spread out an array into individual elements
+console.log(final);
